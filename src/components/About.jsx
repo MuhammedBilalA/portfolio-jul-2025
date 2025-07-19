@@ -88,7 +88,7 @@ const About = () => {
         }}
       >
         <img
-          src="src\assets\profilepic.jpg"
+          src="/src/assets/profilepic.jpg"
           alt="Muhammed Bilal"
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
