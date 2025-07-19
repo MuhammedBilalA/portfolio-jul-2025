@@ -32,6 +32,8 @@ import {
   firstTestimonial,
   secondTestimonial,
   thirdTestimonial,
+  flutter,
+  firebase
 } from '../assets'
 
 
@@ -65,20 +67,24 @@ const services = [
     icon: web,
   },
   {
-    title: "Frontend Developer",
+    title: "Flutter App Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Frontend Developer (React.js)",
     icon: backend,
   },
   {
-    title: "Ui UX Designer",
+    title: "Backend Developer (Node.js & Nest.js)",
     icon: creator,
   },
 ];
 
 const technologies = [
+    {
+name : "Flutter",
+icon : flutter  
+  },
   {
     name: "HTML 5",
     icon: html,
@@ -95,20 +101,25 @@ const technologies = [
     name: "React JS",
     icon: reactjs,
   },
+
   {
-    name: "gsap",
-    icon: gsap,
+name: "Firebase",
+icon : firebase
   },
-  {
-    name: "framer",
-    icon: framer,
-  },
+  // {
+  //   name: "gsap",
+  //   icon: gsap,
+  // },
+  // {
+  //   name: "framer",
+  //   icon: framer,
+  // },
 
  
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
+  // {
+  //   name: "Three JS",
+  //   icon: threejs,
+  // },
   {
     name: "figma",
     icon: figma,

@@ -127,11 +127,13 @@ const Works = () => {
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </div>
 
-      <div className="w-full flex">
-        <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
-          Following projects showcase my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.
-        </p>
-      </div>
+    <div className="w-full flex">
+  <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
+    Explore a selection of projects that highlight my expertise in mobile, web, and backend development.  
+    These works demonstrate my ability to build scalable solutions, integrate diverse technologies, and deliver production-ready applications.
+  </p>
+</div>
+
 
       <div className="works-container mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5">
         {projects.map((project, index) => (

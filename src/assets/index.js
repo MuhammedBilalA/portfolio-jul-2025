@@ -8,6 +8,7 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 import gsap from './tech/gsap.png'
 import framer from './tech/framer.png';
+import flutter from './tech/flutter-logo-1.png';
 import css from "./tech/css.png";
 import figma from "./tech/figma.png";
 import gearXpert from './gearXpert.png';
@@ -29,6 +30,7 @@ import threejs from "./tech/threejs.svg";
 import firstTestimonial from './Tars Ken.webp';
 import secondTestimonial from './image.webp';
 import thirdTestimonial from './third testimonial.webp'
+import firebase from './tech/firebase.png'
 
 export {
   logo,
@@ -62,5 +64,6 @@ export {
   redux,
   tailwind,
   threejs,
-
+flutter,
+firebase
 };
