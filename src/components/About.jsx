@@ -66,22 +66,44 @@ const About = () => {
 
   return (
     <>
-      <div ref={headingRef}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
-      </div>
+     <div className="flex flex-col md:flex-row items-center gap-8 mt-10">
+  {/* Left Side - Text */}
+  <div className="flex-1" ref={headingRef}>
+    <p className={styles.sectionSubText}>Introduction</p>
+    <h2 className={styles.sectionHeadText}>Overview.</h2>
+    <p ref={paragraphRef} className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
+      I’m a software developer with 2.8 years of professional experience in Flutter, React.js, Node.js, and Nest.js.  
+      I specialize in building cross-platform mobile applications, responsive web interfaces, and scalable backend systems.  
+      With a focus on clean architecture, performance, and user experience, I help turn business ideas into impactful digital solutions.
+    </p>
+  </div>
 
-      <p ref={paragraphRef} className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-        I'm a skilled software developer with experience in  JavaScript, and expertise in frameworks 
-        like React, Node.js, and Three.js. I'm a quick learner and collaborate closely with clients to create efficient, 
-        scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!
-      </p>
-
-      <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-10">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
+  {/* Right Side - Aggressive Card */}
+  <div className="flex-1 flex justify-center">
+    <div className="relative group w-72 h-80 p-[4px] bg-gradient-to-r from-purple-700 via-pink-500 to-blue-500 shadow-2xl rounded-[4px] hover:scale-110 transition-transform duration-300">
+      <div
+        className="relative w-full h-full bg-[#0f0f0f] overflow-hidden rounded-[2px] transition-transform duration-300 group-hover:scale-110 group-hover:shadow-[0_0_30px_#ff00ff]"
+        style={{
+          clipPath: 'polygon(0 0, 90% 0, 100% 10%, 100% 100%, 10% 100%, 0 90%)',
+        }}
+      >
+        <img
+          src="src\assets\profilepic.jpg"
+          alt="Muhammed Bilal"
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+        {/* Flash on Hover */}
+        <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-150"></div>
+        {/* Neon Top Pulse Line */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 animate-pulse"></div>
       </div>
+    </div>
+  </div>
+</div>
+
+
+
+
     </>
   );
 };

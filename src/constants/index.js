@@ -37,6 +37,8 @@ import {
 
 // Import Tekisky separately
 import tekisky from "../assets/company/tekisky.png";
+import xlLogo from "../assets/company/xllogo.webp";
+import brototypeLogo from "../assets/company/brototypeLogo.png";
 
 
 export const navLinks = [
@@ -154,24 +156,37 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Full-Stack Developer",
-    company_name: "Tekisky",
-    icon: tekisky,
+    title: "Software Developer",
+    company_name: "Xceptional Learning Pvt Ltd",
+    icon: xlLogo,
     iconBg: "#383E56",
-    date: "Jan 2023 - present",
+    date: "July 2023 - Present",
     points: [
-      "Developing and maintaining web applications using MERN technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed cross-platform mobile applications using Flutter and responsive web interfaces with React.js.",
+      "Built scalable backend services with Node.js and Nest.js, integrating RESTful APIs and JWT-based authentication.",
+      "Implemented multilingual support, real-time notifications, payment gateways, and third-party service integrations.",
+      "Collaborated with cross-functional teams to deliver clean, maintainable code and production-ready solutions.",
+    ],
+  },
+  {
+    title: "Flutter Developer Trainee",
+    company_name: "Brototype",
+    icon: brototypeLogo,
+    iconBg: "#383E56",
+    date: "Nov 2022 - July 2023",
+    points: [
+      "Strengthened Flutter development skills through structured learning and hands-on projects.",
+      "Built functional mobile applications focusing on state management, UI/UX design, and clean architecture.",
+      "Worked in agile teams to deliver real-world projects within set timelines and quality standards.",
     ],
   },
 ];
 
+
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Huzaif proved me wrong.",
+      "I thought it was impossible to make a website as beautiful as our product, but Bilal proved me wrong.",
     name: "MD Mustaqeem",
     designation: "Ecommerce",
     company: "QuickMart",
@@ -179,7 +194,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Huzaif does.",
+      "I've never met a web developer who truly cares about their clients' success like Bilal does.",
     name: "Abdul Raheman",
     designation: "Ecommerce Business",
     company: "justbuyz",
@@ -187,7 +202,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "After Huzaif optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "After Bilal optimized our website, our traffic increased by 50%. We can't thank them enough!",
     name: "James Wang",
     designation: "CTO",
     company: "456 Enterprises",
