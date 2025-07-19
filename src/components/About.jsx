@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
+import profilePic from '../assets/profilepic.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -88,7 +89,7 @@ const About = () => {
         }}
       >
         <img
-          src="/src/assets/profilepic.jpg"
+          src={profilePic}
           alt="Muhammed Bilal"
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
