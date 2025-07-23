@@ -33,7 +33,16 @@ import {
   secondTestimonial,
   thirdTestimonial,
   flutter,
-  firebase
+  firebase,
+  xlConnect,
+  vergeTab,
+  vergeTabLauncher,
+  imoda,
+  xceptionalLearning,
+  ies,
+  blackBeatz,
+  soleSphere,
+  cloudSpotter,
 } from '../assets'
 
 
@@ -223,77 +232,139 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Tekisky Mart",
+    name: "XL Connect",
     description:
-      "Tekisky Mart is a web-based platform that allows users to search, explore, and purchase a wide range of products from various providers, offering a seamless and efficient shopping experience.",
+      "A secure real-time communication app built with Flutter, enabling chat, audio/video calls, file sharing, contact & location sharing for therapy seekers and therapists. Integrated RESTful APIs with JWT, GetX state management, multilingual support, and scheduling features.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "white-text-gradient",
-      },
-      {
-        name: "node",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
- 
+      { name: "flutter", color: "blue-text-gradient" },
+      { name: "dart", color: "green-text-gradient" },
+      { name: "getx", color: "pink-text-gradient" },
+      { name: "jwt-auth", color: "white-text-gradient" },
+      { name: "multilingual", color: "orange-text-gradient" },
+      { name: "responsive-ui", color: "blue-text-gradient" },
+      { name: "restapi", color: "green-text-gradient" },
     ],
-    image: project2,
+    image: xlConnect,
     source_code_link: "https://github.com/",
   },
   {
-    name: "GearXpert",
+    name: "Verge App",
     description:
-      "GearXpert is your ultimate destination for premium auto parts and accessories, Whether you're an automobile enthusiast or a professional, find everything you need to upgrade, repair.",
+      "Flutter-based LMS tailored for special education with assignments, multimedia support, and Construct 3 game integration. Included offline mode, push notifications, multilingual support, WorkManager tasks, and a webview for accessing learning portals.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "emailJs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Gsap",
-        color: "pink-text-gradient",
-      },
+      { name: "flutter", color: "blue-text-gradient" },
+      { name: "construct3", color: "pink-text-gradient" },
+      { name: "push-notifications", color: "green-text-gradient" },
+      { name: "workmanager", color: "white-text-gradient" },
+      { name: "offline-mode", color: "orange-text-gradient" },
+      { name: "lms", color: "blue-text-gradient" },
     ],
-    image: gearXpert,
+    image: vergeTab,
     source_code_link: "https://github.com/",
   },
   {
-    name: "GoGroove-Ecommerce",
+    name: "Launcher App",
     description:
-      "Go-Groove is your ultimate destination for premium products across various categories. Whether you're a savvy shopper or a professional, enhance, and simplify your lifestyle—all in one place!",
+      "Engineered a kiosk-mode launcher for VergeTab devices using Flutter with device lockdown, restricted app access, and system controls like brightness/Wi-Fi. Optimized for accessibility and security for users with special needs. Ensured high device compliance and reliability.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "express",
-        color: "white-text-gradient",
-      },
-      {
-        name: "node",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
+      { name: "flutter", color: "blue-text-gradient" },
+      { name: "device-control", color: "green-text-gradient" },
+      { name: "android-kiosk", color: "pink-text-gradient" },
+      { name: "accessibility", color: "orange-text-gradient" },
+      { name: "ux-design", color: "white-text-gradient" },
     ],
-    image: project3,
+    image: vergeTabLauncher,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "IMODA",
+    description:
+      "Built a full-featured Flutter e-commerce and model management application with Firebase OTP login, Razorpay integration, wishlist, cart, event features, and RESTful Node.js APIs. Designed highly interactive UI/UX and managed notifications for real-time engagement.",
+    tags: [
+      { name: "flutter", color: "blue-text-gradient" },
+      { name: "firebase-auth", color: "green-text-gradient" },
+      { name: "razorpay", color: "pink-text-gradient" },
+      { name: "nodejs", color: "white-text-gradient" },
+      { name: "uiux", color: "orange-text-gradient" },
+      { name: "restapi", color: "blue-text-gradient" },
+    ],
+    image: imoda,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Xceptional Learning",
+    description:
+      "Developed a scalable full-stack EdTech platform using React, Nest.js, and Node.js. Integrated JWT-secured login, multilingual support, PostgreSQL on AWS, webinar hosting, game modules, and academic tracking. ZeptoMail integration for transactional notifications.",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "nestjs", color: "green-text-gradient" },
+      { name: "aws", color: "pink-text-gradient" },
+      { name: "postgresql", color: "white-text-gradient" },
+      { name: "jwt-auth", color: "orange-text-gradient" },
+      { name: "websocket", color: "blue-text-gradient" },
+    ],
+    image: xceptionalLearning,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "XL-IES",
+    description:
+      "Architected a backend platform using React and Node.js for real-time assessments, performance analytics, and reporting. Enabled data visualization dashboards for educators and parents with alert systems, outcome tracking, and school management tools.",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "nodejs", color: "pink-text-gradient" },
+      { name: "dashboard", color: "green-text-gradient" },
+      { name: "analytics", color: "pink-text-gradient" },
+      { name: "reporting", color: "white-text-gradient" },
+      { name: "admin-panel", color: "orange-text-gradient" },
+    ],
+    image: ies,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "BlackBeatz",
+    description:
+      "Designed and developed an offline Flutter-based music player supporting local media playback, playlist management, and lightweight storage with Hive DB. Applied BLoC for efficient state control and seamless UX.",
+    tags: [
+      { name: "flutter", color: "blue-text-gradient" },
+      { name: "bloc", color: "green-text-gradient" },
+      { name: "hive-db", color: "pink-text-gradient" },
+      { name: "media-player", color: "white-text-gradient" },
+      { name: "offline-app", color: "orange-text-gradient" },
+    ],
+    image: blackBeatz,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "SoleSphere",
+    description:
+      "Created a Flutter e-commerce app with Google/email login, Firebase backend, real-time Razorpay payments, delivery tracking, and admin dashboard. Focused on performance, real-time updates, and secure architecture.",
+    tags: [
+      { name: "flutter", color: "blue-text-gradient" },
+      { name: "firebase", color: "green-text-gradient" },
+      { name: "razorpay", color: "pink-text-gradient" },
+      { name: "ecommerce", color: "white-text-gradient" },
+      { name: "admin-panel", color: "orange-text-gradient" },
+    ],
+    image: soleSphere,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Cloud Spotter",
+    description:
+      "Built a real-time weather forecast app using Flutter and open weather APIs. Prioritized performance, fast load times, clean UI, and accurate location-based weather rendering.",
+    tags: [
+      { name: "flutter", color: "blue-text-gradient" },
+      { name: "weather-api", color: "green-text-gradient" },
+      { name: "state-management", color: "pink-text-gradient" },
+      { name: "clean-ui", color: "white-text-gradient" },
+      { name: "location-services", color: "orange-text-gradient" },
+    ],
+    image:  cloudSpotter,
     source_code_link: "https://github.com/",
   },
 ];
+
+
 
 export { services, technologies, experiences, testimonials, projects };

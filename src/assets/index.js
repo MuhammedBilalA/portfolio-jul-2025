@@ -14,6 +14,7 @@ import figma from "./tech/figma.png";
 import gearXpert from './gearXpert.png';
 import project3 from './project3.webp';
 import project2 from './proj1.webp'
+import xlConnect from './xlConnect.jpg'
 import mysql from './tech/mysql.png';
 import express from './tech/express.png';
 import aws from './tech/aws.png';
@@ -31,6 +32,15 @@ import firstTestimonial from './Tars Ken.webp';
 import secondTestimonial from './image.webp';
 import thirdTestimonial from './third testimonial.webp'
 import firebase from './tech/firebase.png'
+import vergeTab from './vergeTab-2.jpg'
+import vergeTabLauncher from './vergeTab.jpg'
+import imoda from './imoda.webp'
+import xceptionalLearning from './xceptionalLearning.png'
+import ies from './ies.png'
+import blackBeatz from './blackBeatz.jpeg'
+import cloudSpotter from './cloudSpotter.png'
+import soleSphere from './soleSphere.png'
+
 
 export {
   logo,
@@ -65,5 +75,14 @@ export {
   tailwind,
   threejs,
 flutter,
-firebase
+firebase,
+xlConnect,
+vergeTab,
+vergeTabLauncher,
+imoda,
+xceptionalLearning,
+ies,
+blackBeatz,
+cloudSpotter,
+soleSphere
 };
