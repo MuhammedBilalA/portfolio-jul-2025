@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { styles } from "../styles";
-import { github } from "../assets";
+import { github, playstoreIcon, websiteIcon } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 
@@ -17,7 +17,8 @@ const ProjectCard = ({
   description,
   tags,
   image,
-  source_code_link,
+  // source_code_link,
+  source_links = {},
 }) => {
   const cardRef = useRef(null);
 
@@ -62,18 +63,46 @@ const ProjectCard = ({
             className="w-full h-full object-cover object-left rounded-2xl"
           />
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={github}
-                alt="source code"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
+          <div className="absolute inset-0 flex justify-end m-3 gap-2 card-img_hover">
+            {source_links?.github && (
+              <div
+                onClick={() => window.open(source_links.github, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                title="Source Code"
+              >
+                <img src={github} alt="GitHub" className="w-1/2 h-1/2 object-contain" />
+              </div>
+            )}
+
+            {source_links?.website && (
+              <div
+                onClick={() => window.open(source_links.website, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                title="Live Website"
+              >
+                <img
+                  src={websiteIcon}
+                  alt="Live Site"
+                  className="w-1/2 h-1/2 object-contain"
+                />
+              </div>
+            )}
+
+            {source_links?.playstore && (
+              <div
+                onClick={() => window.open(source_links.playstore, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                title="Play Store"
+              >
+                <img
+                  src={playstoreIcon}
+                  alt="Play Store"
+                  className="w-1/2 h-1/2 object-contain"
+                />
+              </div>
+            )}
           </div>
+
         </div>
 
         <div className="mt-5">
@@ -127,12 +156,12 @@ const Works = () => {
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </div>
 
-    <div className="w-full flex">
-  <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
-    Explore a selection of projects that highlight my expertise in mobile, web, and backend development.  
-    These works demonstrate my ability to build scalable solutions, integrate diverse technologies, and deliver production-ready applications.
-  </p>
-</div>
+      <div className="w-full flex">
+        <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
+          Explore a selection of projects that highlight my expertise in mobile, web, and backend development.
+          These works demonstrate my ability to build scalable solutions, integrate diverse technologies, and deliver production-ready applications.
+        </p>
+      </div>
 
 
       <div className="works-container mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5">

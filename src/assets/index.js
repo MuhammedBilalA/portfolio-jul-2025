@@ -40,6 +40,11 @@ import ies from './ies.png'
 import blackBeatz from './blackBeatz.jpeg'
 import cloudSpotter from './cloudSpotter.png'
 import soleSphere from './soleSphere.png'
+import websiteIcon from './websiteIcon.png'
+import playstoreIcon from './playstoreIcon.png'
+import saheerTestimonial from './saheerTestimonial.jpg'
+import ajaiTestimonial from './ajaiTestimonial.png'
+import shamilTestimonial from './shamilTestimonial.png'
 
 
 export {
@@ -84,5 +89,10 @@ xceptionalLearning,
 ies,
 blackBeatz,
 cloudSpotter,
-soleSphere
+soleSphere,
+  websiteIcon,
+  playstoreIcon,
+  ajaiTestimonial,
+  saheerTestimonial
+  ,shamilTestimonial
 };

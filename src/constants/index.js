@@ -43,6 +43,11 @@ import {
   blackBeatz,
   soleSphere,
   cloudSpotter,
+  websiteIcon,
+  playstoreIcon,
+  saheerTestimonial,
+  ajaiTestimonial,
+  shamilTestimonial
 } from '../assets'
 
 
@@ -206,31 +211,51 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Bilal proved me wrong.",
-    name: "MD Mustaqeem",
-    designation: "Ecommerce",
-    company: "QuickMart",
-    image: firstTestimonial,
+      "Bilal’s Flutter skills are top-notch. His clean UI and smooth app performance always impressed me.",
+    name: "Ajai Joseph",
+    designation: "Senior Flutter Developer",
+    company: "Xceptional Learning",
+
+    image: ajaiTestimonial,
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Bilal does.",
-    name: "Abdul Raheman",
-    designation: "Ecommerce Business",
-    company: "justbuyz",
-    image: secondTestimonial,
+      "Bilal handled full-stack tasks efficiently. His quick problem-solving made a big impact on our releases.",
+    name: "Mohammed Shamil",
+    designation: "Senior Full Stack Developer",
+    company: "Xceptional Learning",
+    image: shamilTestimonial,
   },
   {
-    testimonial:
-      "After Bilal optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "James Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: thirdTestimonial,
+  testimonial:
+    "Working with Bilal was seamless. His technical depth made the development efficient and smooth.",
+  name: "Saheer Moidhu",
+  designation: "Game Developer & Chartered Accountant",
+  company: "Independent Consultant",
+    image: saheerTestimonial,
   },
 ];
 
 const projects = [
+   {
+    name: "IMODA",
+    description:
+      "Built a full-featured Flutter e-commerce and model management application with Firebase OTP login, Razorpay integration, wishlist, cart, event features, and RESTful Node.js APIs. Designed highly interactive UI/UX and managed notifications for real-time engagement.",
+    tags: [
+      { name: "flutter", color: "blue-text-gradient" },
+      { name: "firebase-auth", color: "green-text-gradient" },
+      { name: "razorpay", color: "pink-text-gradient" },
+      { name: "nodejs", color: "white-text-gradient" },
+      { name: "uiux", color: "orange-text-gradient" },
+      { name: "restapi", color: "blue-text-gradient" },
+    ],
+    image: imoda,
+    // source_code_link: "https://github.com/",
+    source_links:{
+      playstore:"https://play.google.com/store/apps/details?id=com.imoda.apps&pcampaignid=web_share"
+    },
+
+  },
   {
     name: "XL Connect",
     description:
@@ -245,7 +270,10 @@ const projects = [
       { name: "restapi", color: "green-text-gradient" },
     ],
     image: xlConnect,
-    source_code_link: "https://github.com/",
+    // source_code_link: "https://github.com/",
+    source_links: {
+    playstore: "https://play.google.com/store/apps/details?id=com.xceptionallearningindia.xlconnectapp&pcampaignid=web_share",
+    },
   },
   {
     name: "Verge App",
@@ -260,37 +288,13 @@ const projects = [
       { name: "lms", color: "blue-text-gradient" },
     ],
     image: vergeTab,
-    source_code_link: "https://github.com/",
+    // source_code_link: "https://github.com/",
+    source_links: {
+    playstore: "https://play.google.com/store/apps/details?id=com.xceptionallearningindia.vergetabapp&pcampaignid=web_share",
   },
-  {
-    name: "Launcher App",
-    description:
-      "Engineered a kiosk-mode launcher for VergeTab devices using Flutter with device lockdown, restricted app access, and system controls like brightness/Wi-Fi. Optimized for accessibility and security for users with special needs. Ensured high device compliance and reliability.",
-    tags: [
-      { name: "flutter", color: "blue-text-gradient" },
-      { name: "device-control", color: "green-text-gradient" },
-      { name: "android-kiosk", color: "pink-text-gradient" },
-      { name: "accessibility", color: "orange-text-gradient" },
-      { name: "ux-design", color: "white-text-gradient" },
-    ],
-    image: vergeTabLauncher,
-    source_code_link: "https://github.com/",
   },
-  {
-    name: "IMODA",
-    description:
-      "Built a full-featured Flutter e-commerce and model management application with Firebase OTP login, Razorpay integration, wishlist, cart, event features, and RESTful Node.js APIs. Designed highly interactive UI/UX and managed notifications for real-time engagement.",
-    tags: [
-      { name: "flutter", color: "blue-text-gradient" },
-      { name: "firebase-auth", color: "green-text-gradient" },
-      { name: "razorpay", color: "pink-text-gradient" },
-      { name: "nodejs", color: "white-text-gradient" },
-      { name: "uiux", color: "orange-text-gradient" },
-      { name: "restapi", color: "blue-text-gradient" },
-    ],
-    image: imoda,
-    source_code_link: "https://github.com/",
-  },
+  
+ 
   {
     name: "Xceptional Learning",
     description:
@@ -304,7 +308,10 @@ const projects = [
       { name: "websocket", color: "blue-text-gradient" },
     ],
     image: xceptionalLearning,
-    source_code_link: "https://github.com/",
+    // source_code_link: "https://github.com/",
+    source_links: {
+      website: "https://xceptionallearning.com/",
+      },
   },
   {
     name: "XL-IES",
@@ -319,7 +326,24 @@ const projects = [
       { name: "admin-panel", color: "orange-text-gradient" },
     ],
     image: ies,
-    source_code_link: "https://github.com/",
+    // source_code_link: "https://github.com/",
+    source_links: {
+      website: "https://ies.xceptionallearningindia.com/",
+    },
+  },
+  {
+    name: "Launcher App",
+    description:
+      "Engineered a kiosk-mode launcher for VergeTab devices using Flutter with device lockdown, restricted app access, and system controls like brightness/Wi-Fi. Optimized for accessibility and security for users with special needs. Ensured high device compliance and reliability.",
+    tags: [
+      { name: "flutter", color: "blue-text-gradient" },
+      { name: "device-control", color: "green-text-gradient" },
+      { name: "android-kiosk", color: "pink-text-gradient" },
+      { name: "accessibility", color: "orange-text-gradient" },
+      { name: "ux-design", color: "white-text-gradient" },
+    ],
+    image: vergeTabLauncher,
+    source_links:{},
   },
   {
     name: "BlackBeatz",
@@ -333,7 +357,9 @@ const projects = [
       { name: "offline-app", color: "orange-text-gradient" },
     ],
     image: blackBeatz,
-    source_code_link: "https://github.com/",
+    // source_code_link: "https://github.com/",
+    source_links: {
+      github: "https://github.com/MuhammedBilalA/BLACKBEATZ-OFFICIAL.git"   },
   },
   {
     name: "SoleSphere",
@@ -347,7 +373,9 @@ const projects = [
       { name: "admin-panel", color: "orange-text-gradient" },
     ],
     image: soleSphere,
-    source_code_link: "https://github.com/",
+    // source_code_link: "https://github.com/",
+    source_links: {
+      github: "https://github.com/MuhammedBilalA/SOLE_SPHERE-E_COMMERCE.git" },
   },
   {
     name: "Cloud Spotter",
@@ -361,8 +389,10 @@ const projects = [
       { name: "location-services", color: "orange-text-gradient" },
     ],
     image:  cloudSpotter,
-    source_code_link: "https://github.com/",
-  },
+    // source_code_link: "https://github.com/",
+    source_links: {
+      github: "https://github.com/MuhammedBilalA/CloudSpotter-weatherApp.git"
+  },}
 ];
 
 
