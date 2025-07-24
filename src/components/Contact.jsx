@@ -16,6 +16,8 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
+  const [statusType, setStatusType] = useState("success");
 
   const handleChange = (e) => {
     const { target } = e;
@@ -44,24 +46,19 @@ const Contact = () => {
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+      .then(() => {
+        setLoading(false);
+        setStatusType("success");
+        setStatusMessage("Thank you for reaching out. I’ll get back to you shortly.");
+        setForm({ name: "", email: "", message: "" });
+      })
+      .catch((error) => {
+        setLoading(false);
+        console.error(error);
+        setStatusType("error");
+        setStatusMessage("Something went wrong. Please try again later.");
+      });
 
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-
-          alert("Ahh, something went wrong. Please try again.");
-        }
-      );
   };
 
   return (
@@ -120,6 +117,17 @@ const Contact = () => {
           >
             {loading ? "Sending..." : "Send"}
           </button>
+          {statusMessage && (
+            <div
+              className={`mt-4 px-4 py-3 rounded-lg text-sm ${statusType === "success"
+                  ? "bg-green-500 text-white"
+                  : "bg-red-500 text-white"
+                }`}
+            >
+              {statusMessage}
+            </div>
+          )}
+
         </form>
       </motion.div>
 
