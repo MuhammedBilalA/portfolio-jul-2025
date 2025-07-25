@@ -1,5 +1,5 @@
 import React from "react";
-import { FaInstagram, FaXTwitter, FaLinkedin } from "react-icons/fa6";
+import { FaInstagram, FaXTwitter, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -13,6 +13,13 @@ const Footer = () => {
       </a>
       <a href="https://www.instagram.com/black.__bee_?igsh=OGdjcnR0N2phNHo=" target="_blank" rel="noopener noreferrer">
         <FaXTwitter size={24} />
+      </a>
+      <a
+        href="https://wa.me/918606708772"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaWhatsapp size={24} />
       </a>
       <a
         href="https://www.linkedin.com/in/muhammedbilala/"
