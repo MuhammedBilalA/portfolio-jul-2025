@@ -59,7 +59,11 @@ import brototypeLogo from "../assets/company/brototypeLogo.png";
 
 export const navLinks = [
 
-
+{
+  id: "resume",
+  title: "Resume",
+  url: "/resume"
+},
   {
     id: "about",
     title: "About",
