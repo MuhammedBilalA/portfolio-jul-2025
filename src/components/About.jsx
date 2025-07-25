@@ -2,11 +2,11 @@ import React, { useRef, useEffect } from "react";
 import { Tilt } from "react-tilt";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
-import profilePic from '../assets/profilepic.jpg';
+// import profilePic from '../assets/profilepic.jpg';
+import profilePic from '../assets/BilalProfilePic.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,48 +67,68 @@ const About = () => {
 
   return (
     <>
-     <div className="flex flex-col md:flex-row items-center gap-8 mt-10">
-  {/* Left Side - Text */}
-  <div className="flex-1" ref={headingRef}>
-    <p className={styles.sectionSubText}>Introduction</p>
-    <h2 className={styles.sectionHeadText}>Overview.</h2>
-    <p ref={paragraphRef} className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-      I’m a software developer with 2.8 years of professional experience in Flutter, React.js, Node.js, and Nest.js.  
-      I specialize in building cross-platform mobile applications, responsive web interfaces, and scalable backend systems.  
-      With a focus on clean architecture, performance, and user experience, I help turn business ideas into impactful digital solutions.
-    </p>
-  </div>
+      <div className="flex flex-col md:flex-row items-center gap-8 mt-10">
+        {/* Left Side - Text */}
+        <div className="flex-1" ref={headingRef}>
+          <p className={styles.sectionSubText}>Introduction</p>
+          <h2 className={styles.sectionHeadText}>Overview.</h2>
+          <p ref={paragraphRef} className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
+            I'm a software developer with 2.8 years of professional experience in Flutter, React.js, Node.js, and Nest.js.  
+            I specialize in building cross-platform mobile applications, responsive web interfaces, and scalable backend systems.  
+            With a focus on clean architecture, performance, and user experience, I help turn business ideas into impactful digital solutions.
+          </p>
+        </div>
 
-  {/* Right Side - Aggressive Card */}
-  <div className="flex-1 flex justify-center">
-    <div className="relative group w-72 h-80 p-[4px] bg-gradient-to-r from-purple-700 via-pink-500 to-blue-500 shadow-2xl rounded-[4px] hover:scale-110 transition-transform duration-300">
-      <div
-        className="relative w-full h-full bg-[#0f0f0f] overflow-hidden rounded-[2px] transition-transform duration-300 group-hover:scale-110 group-hover:shadow-[0_0_30px_#ff00ff]"
-        style={{
-          clipPath: 'polygon(0 0, 90% 0, 100% 10%, 100% 100%, 10% 100%, 0 90%)',
-        }}
-      >
-        <img
-          src={profilePic}
-          alt="Muhammed Bilal"
-          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-        {/* Flash on Hover */}
-        <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-150"></div>
-        {/* Neon Top Pulse Line */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 animate-pulse"></div>
+        {/* Right Side - Professional Profile Card */}
+        <div className="flex-1 flex justify-center">
+          <div className="relative group w-80 h-96 p-[3px] bg-gradient-to-br from-slate-600 via-gray-700 to-black shadow-2xl rounded-lg hover:scale-105 transition-all duration-500">
+            <div
+              className="relative w-full h-full bg-gradient-to-br from-gray-900 to-black overflow-hidden rounded-lg transition-all duration-500 group-hover:shadow-[0_0_40px_rgba(255,255,255,0.3)]"
+              style={{
+                clipPath: 'polygon(0 0, 95% 0, 100% 5%, 100% 100%, 5% 100%, 0 95%)',
+              }}
+            >
+              {/* Professional suit photo */}
+              <img
+                src={profilePic}
+                alt="Muhammed Bilal"
+                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110 filter brightness-110 contrast-110"
+                style={{
+                  filter: 'brightness(1.1) contrast(1.2) saturate(0.9)'
+                }}
+              />
+              
+              {/* Subtle overlay for professional look */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+              
+              {/* Professional glow on hover */}
+              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+              
+              {/* Elegant top accent line */}
+              <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-gray-400 via-white to-gray-400 opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              {/* Corner accent */}
+              <div className="absolute top-2 right-2 w-8 h-8 border-t-2 border-r-2 border-white/40 group-hover:border-white/80 transition-colors duration-300"></div>
+              
+              {/* Bottom professional nameplate effect */}
+              <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/90 to-transparent flex flex-col items-center justify-end pb-3">
+                <div className="text-white text-xs font-light tracking-[0.2em] opacity-70 group-hover:opacity-100 transition-opacity duration-300 mb-1">
+                  MUHAMMED BILAL
+                </div>
+                <div className="text-gray-300 text-[10px] font-light tracking-wider opacity-50 group-hover:opacity-80 transition-opacity duration-300">
+                  SOFTWARE ENGINEER
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
-<div className="mt-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-10">
+      <div className="mt-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
-
-
     </>
   );
 };
