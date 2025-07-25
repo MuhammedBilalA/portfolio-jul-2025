@@ -11,7 +11,7 @@ const ResumeViewer = () => (
       </p>
       <div className="w-full h-[65vh] md:h-[70vh] rounded-xl overflow-hidden border border-[#915EFF]/40 shadow-lg mb-8 flex items-center justify-center bg-[#23234b]/60">
         <iframe
-          src="/MuhammedBilalAResume.pdf"
+          src="/MuhammedBilalAResume.pdf#toolbar=0"
           title="Resume"
           className="w-full h-full border-none rounded-xl"
           frameBorder="0"
