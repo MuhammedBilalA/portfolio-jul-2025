@@ -92,7 +92,7 @@ const About = () => {
               <img
                 src={profilePic}
                 alt="Muhammed Bilal"
-                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110 filter brightness-110 contrast-110"
+                className="w-full h-full object-cover object-center scale-90 transition-transform duration-500 group-hover:scale-100 filter brightness-110 contrast-110"
                 style={{
                   filter: 'brightness(1.1) contrast(1.2) saturate(0.9)'
                 }}
