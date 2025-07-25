@@ -113,10 +113,10 @@ const About = () => {
               {/* Bottom professional nameplate effect */}
               <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/90 to-transparent flex flex-col items-center justify-end pb-3">
                 <div className="text-white text-xs font-light tracking-[0.2em] opacity-70 group-hover:opacity-100 transition-opacity duration-300 mb-1">
-                  MUHAMMED BILAL
+                  MUHAMMED BILAL A
                 </div>
                 <div className="text-gray-300 text-[10px] font-light tracking-wider opacity-50 group-hover:opacity-80 transition-opacity duration-300">
-                  SOFTWARE ENGINEER
+                  SOFTWARE DEVELOPER
                 </div>
               </div>
             </div>

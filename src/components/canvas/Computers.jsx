@@ -20,9 +20,9 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.5 : 0.75} // Smaller scale for mobile
-        position={isMobile ? [0, -2.5, -1.2] : [0, -3.25, -1.5]} // Adjusted position for mobile
-        rotation={[-0.01, -0.2, -0.1]}
+        scale={isMobile ? 0.6 : 0.75}
+        position={isMobile ? [0, -1.5, -1.2] : [0, -3.25, -1.5]}
+        rotation={[-0.01, 0, -0.1]}
       />
     </mesh>
   );
@@ -32,18 +32,13 @@ const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
   
   useEffect(() => {
-    // Check if window is defined (for SSR compatibility)
     if (typeof window !== 'undefined') {
-      setIsMobile(window.innerWidth <= 500); // Changed to 768px for better mobile detection
-      
+      setIsMobile(window.innerWidth <= 500);
       const mediaQuery = window.matchMedia("(max-width: 500px)");
-      
       const handleMediaQueryChange = (event) => {
         setIsMobile(event.matches);
       };
-      
       mediaQuery.addEventListener("change", handleMediaQueryChange);
-      
       return () => {
         mediaQuery.removeEventListener("change", handleMediaQueryChange);
       };
@@ -58,13 +53,16 @@ const ComputersCanvas = () => {
         camera={{ position: [20, 3, 5], fov: 25 }}
         gl={{ preserveDrawingBuffer: true }}
       style={{
-        height: isMobile ? '300px' : '100%', // Smaller height on mobile
+        height: isMobile ? '300px' : '100%',
         width: '100%'
       }}
       >
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
             enableZoom={false}
+            enableRotate={true}
+            autoRotate={true}
+            autoRotateSpeed={0.9}
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}
           />

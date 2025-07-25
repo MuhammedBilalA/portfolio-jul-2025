@@ -230,7 +230,7 @@ const testimonials = [
   testimonial:
     "Working with Bilal was seamless. His technical depth made the development efficient and smooth.",
   name: "Saheer Moidhu",
-  designation: "Game Developer & Chartered Accountant",
+  designation: "Game Developer & ACCA",
   company: "Independent Consultant",
     image: saheerTestimonial,
   },
