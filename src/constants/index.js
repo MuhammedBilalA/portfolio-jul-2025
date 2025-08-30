@@ -55,6 +55,7 @@ import {
 import tekisky from "../assets/company/tekisky.png";
 import xlLogo from "../assets/company/xllogo.webp";
 import brototypeLogo from "../assets/company/brototypeLogo.png";
+import pixelbohoLogo from "../assets/company/PixelbohoLogo.png";
 
 
 export const navLinks = [
@@ -185,11 +186,26 @@ icon : firebase
 
 const experiences = [
   {
+  title: "Senior Software Developer & Team Lead",
+  company_name: "Pixel Boho Pvt Ltd",
+  icon: pixelbohoLogo, // replace with actual logo variable
+  iconBg: "#383E56",
+  date: "August 2025 - Present",
+  points: [
+    "Leading a team of developers to design and deliver scalable web and mobile applications.",
+    "Architected and implemented backend services with Node.js and Nest.js, ensuring performance and security.",
+    "Built dynamic, responsive front-end solutions with Flutter, React.js and Next.js for seamless user experiences.",
+    "Mentored junior developers, conducted code reviews, and established best practices for clean and maintainable code.",
+    "Collaborated closely with product managers, designers, and stakeholders to align technical solutions with business goals.",
+  ],
+},
+
+  {
     title: "Software Developer",
     company_name: "Xceptional Learning Pvt Ltd",
     icon: xlLogo,
     iconBg: "#383E56",
-    date: "July 2023 - Present",
+    date: "July 2023 - August 2025",
     points: [
       "Developed cross-platform mobile applications using Flutter and responsive web interfaces with React.js.",
       "Built scalable backend services with Node.js and Nest.js, integrating RESTful APIs and JWT-based authentication.",

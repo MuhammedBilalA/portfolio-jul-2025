@@ -6,7 +6,9 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 // import profilePic from '../assets/profilepic.jpg';
-import profilePic from '../assets/BilalProfilePic.png';
+// import profilePic from '../assets/BilalProfilePic.png';
+// import profilePic from '../assets/Bilal-PS-2.jpg';
+import profilePic from '../assets/Bilal-PS.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
