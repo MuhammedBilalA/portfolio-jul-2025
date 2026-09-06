@@ -34,7 +34,9 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4578";
+      const API_URL = import.meta.env.DEV
+        ? "http://localhost:4578"
+        : "https://portfolio-backend-bilal.vercel.app";
       const response = await fetch(`${API_URL}/api/send-email`, {
         method: "POST",
         headers: {
