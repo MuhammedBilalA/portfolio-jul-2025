@@ -7,7 +7,7 @@ import { showResume } from "../constants";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-auto md:h-screen mx-auto mb-10 md:mb-0 pb-10 md:pb-0">
+    <section className="relative w-full h-auto md:h-screen mx-auto mb-0 pb-0">
       <div
         className={`relative md:absolute md:inset-0 pt-28 sm:pt-32 md:pt-0 md:top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 z-10 pointer-events-none`}
       >
@@ -48,7 +48,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="hidden md:block w-full h-full">
+      <div className="w-full h-[280px] xs:h-[320px] sm:h-[360px] md:h-full mt-2 md:mt-0 overflow-hidden">
         <ComputersCanvas />
       </div>
 

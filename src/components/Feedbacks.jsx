@@ -40,14 +40,16 @@ const FeedbackCard = ({ index, testimonial, name, designation, company, image })
   return (
     <div
       ref={cardRef}
-      className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full"
+      className="bg-black-200 p-10 rounded-3xl w-full h-full flex flex-col"
     >
       <p className="text-white font-black text-[48px]">"</p>
 
-      <div className="mt-1">
-        <p className="text-white tracking-wider text-[18px]">{testimonial}</p>
+      <div className="mt-1 flex flex-col flex-1">
+        <p className="text-white tracking-normal text-[17px] sm:text-[18px] leading-relaxed text-left">
+          {testimonial}
+        </p>
 
-        <div className="mt-7 flex justify-between items-center gap-1">
+        <div className="mt-auto pt-7 flex justify-between items-center gap-1">
           <div className="flex-1 flex flex-col">
             <p className="text-white font-medium text-[16px]">
               <span className="blue-text-gradient">@</span> {name}
@@ -78,7 +80,7 @@ const Feedbacks = () => {
         </div>
       </div>
       <div
-        className={`-mt-16 sm:-mt-20 pb-12 sm:pb-14 ${styles.paddingX} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 justify-items-center`}
+        className={`-mt-16 sm:-mt-20 pb-12 sm:pb-14 ${styles.paddingX} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 items-stretch`}
       >
         {testimonials.map((testimonial, index) => (
           <FeedbackCard key={testimonial.name} index={index} {...testimonial} />

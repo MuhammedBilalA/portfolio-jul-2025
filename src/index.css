@@ -31,6 +31,13 @@ body,
   display: block;
 }
 
+@media (max-width: 767px) {
+  .hash-span {
+    margin-top: -48px;
+    padding-bottom: 48px;
+  }
+}
+
 .black-gradient {
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(

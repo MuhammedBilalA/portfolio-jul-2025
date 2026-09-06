@@ -257,7 +257,7 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "Bilal’s Flutter skills are top-notch. His clean UI and smooth app performance always impressed me.",
+      "Bilal delivers production-ready Flutter apps with exceptional UI craft and strong performance. His clean architecture focus made complex mobile collaboration reliable, polished, and highly efficient across our team.",
     name: "Ajai Joseph",
     designation: "Senior Flutter Developer",
     company: "Xceptional Learning",
@@ -266,7 +266,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "Bilal handled full-stack tasks efficiently. His quick problem-solving made a big impact on our releases.",
+      "Bilal approaches full-stack delivery with clarity, ownership, and strong problem-solving skill. He clears blockers quickly, aligns across the stack, and helped us ship stable product releases on schedule as planned.",
     name: "Mohammed Shamil",
     designation: "Senior Full Stack Developer",
     company: "Xceptional Learning",
@@ -274,7 +274,7 @@ const testimonials = [
   },
   {
   testimonial:
-    "Working with Bilal was seamless. His technical depth made the development efficient and smooth.",
+    "Working with Bilal is productive and seamless throughout each project engagement. His depth across mobile and web sped up decisions and kept development smooth, clear, and efficient from start through final release.",
   name: "Saheer Moidhu",
   designation: "Game Developer & ACCA",
   company: "Independent Consultant",

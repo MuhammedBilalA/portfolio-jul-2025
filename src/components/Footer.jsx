@@ -1,5 +1,5 @@
 import React from "react";
-import { FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
+import { FaEnvelope, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -15,7 +15,9 @@ const Footer = () => {
           <FaInstagram size={22} />
         </a>
         <a
-          href="https://wa.me/918606708772"
+          href={`https://wa.me/918606708772?text=${encodeURIComponent(
+            "Hello Bilal, I came across your portfolio and would like to discuss a potential opportunity."
+          )}`}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="WhatsApp"
@@ -33,6 +35,13 @@ const Footer = () => {
           <FaLinkedin size={22} />
         </a>
       </div>
+      <a
+        href="mailto:support.muhammedbilala@gmail.com"
+        className="inline-flex items-center gap-2 text-secondary text-sm tracking-wide hover:text-[#915EFF] transition-colors duration-200"
+      >
+        <FaEnvelope size={14} />
+        support.muhammedbilala@gmail.com
+      </a>
       <p className="text-secondary text-sm tracking-wide">
         &copy; 2026 Muhammed Bilal A
       </p>

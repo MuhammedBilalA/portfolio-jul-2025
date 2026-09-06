@@ -1,16 +1,22 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa6";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+const WHATSAPP_URL = `https://wa.me/918606708772?text=${encodeURIComponent(
+  "Hello Bilal, I came across your portfolio and would like to discuss a potential opportunity."
+)}`;
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
     email: "",
+    mobile: "",
     message: "",
   });
 
@@ -28,7 +34,8 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("https://portfolio-backend-bilal.vercel.app/api/send-email", {
+      const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4578";
+      const response = await fetch(`${API_URL}/api/send-email`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -41,7 +48,7 @@ const Contact = () => {
       if (response.ok) {
         setStatusType("success");
         setStatusMessage("Thank you for reaching out. I’ll get back to you shortly.");
-        setForm({ name: "", email: "", message: "" });
+        setForm({ name: "", email: "", mobile: "", message: "" });
       } else {
         setStatusType("error");
         setStatusMessage(result.error || "Something went wrong. Please try again later.");
@@ -94,6 +101,18 @@ const Contact = () => {
             />
           </label>
           <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">Your mobile</span>
+            <input
+              type="tel"
+              name="mobile"
+              value={form.mobile}
+              onChange={handleChange}
+              placeholder="What's your mobile number?"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              required
+            />
+          </label>
+          <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
             <textarea
               rows={7}
@@ -106,12 +125,23 @@ const Contact = () => {
             />
           </label>
 
-          <button
-            type="submit"
-            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
+          <div className="flex flex-wrap items-center gap-4">
+            <button
+              type="submit"
+              className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+            >
+              {loading ? "Sending..." : "Send"}
+            </button>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary inline-flex items-center gap-2"
+            >
+              <FaWhatsapp size={20} />
+              WhatsApp
+            </a>
+          </div>
 
           {statusMessage && (
             <div
