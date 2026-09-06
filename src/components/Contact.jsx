@@ -36,7 +36,7 @@ const Contact = () => {
     try {
       const API_URL = import.meta.env.DEV
         ? "http://localhost:4578"
-        : "https://portfolio-backend-bilal.vercel.app";
+        : "https://portfolio-backend-muhammedbilala.vercel.app";
       const response = await fetch(`${API_URL}/api/send-email`, {
         method: "POST",
         headers: {
