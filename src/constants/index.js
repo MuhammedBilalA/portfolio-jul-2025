@@ -15,6 +15,8 @@ import {
   mysql,
   express,
   aws,
+  azure,
+  googlecloud,
   mui,
   
   gsap,
@@ -47,7 +49,17 @@ import {
   playstoreIcon,
   saheerTestimonial,
   ajaiTestimonial,
-  shamilTestimonial
+  shamilTestimonial,
+  bromide,
+  careeriq360,
+  whatnext,
+  prepacademy,
+  indigo,
+  thejusHomes,
+  paramountIspace,
+  commercialRent,
+  sastra,
+  trendzb2b,
 } from '../assets'
 
 
@@ -57,6 +69,8 @@ import xlLogo from "../assets/company/xllogo.webp";
 import brototypeLogo from "../assets/company/brototypeLogo.png";
 import pixelbohoLogo from "../assets/company/PixelbohoLogo.png";
 
+// Set to true when the resume PDF is updated and ready to share
+export const showResume = false;
 
 export const navLinks = [
 
@@ -75,6 +89,10 @@ export const navLinks = [
     title: "Work",
   },
   {
+    id: "projects",
+    title: "Projects",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
@@ -82,7 +100,7 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Full-Stack Developer",
+    title: "Head of IT Department",
     icon: web,
   },
   {
@@ -90,11 +108,11 @@ const services = [
     icon: mobile,
   },
   {
-    title: "Frontend Developer (React.js)",
+    title: "Full-Stack Developer (React · Next · Nest · Django)",
     icon: backend,
   },
   {
-    title: "Backend Developer (Node.js & Nest.js)",
+    title: "DevOps & Cloud Infrastructure",
     icon: creator,
   },
 ];
@@ -168,6 +186,14 @@ icon : firebase
     icon: aws,
   },
   {
+    name: "Azure",
+    icon: azure,
+  },
+  {
+    name: "Google Cloud",
+    icon: googlecloud,
+  },
+  {
     name: "MongoDB",
     icon: mongodb,
   },
@@ -186,17 +212,17 @@ icon : firebase
 
 const experiences = [
   {
-  title: "Senior Software Developer & Team Lead",
+  title: "Head of IT Department",
   company_name: "Pixel Boho Pvt Ltd",
-  icon: pixelbohoLogo, // replace with actual logo variable
+  icon: pixelbohoLogo,
   iconBg: "#383E56",
   date: "August 2025 - Present",
   points: [
-    "Leading a team of developers to design and deliver scalable web and mobile applications.",
-    "Architected and implemented backend services with Node.js and Nest.js, ensuring performance and security.",
-    "Built dynamic, responsive front-end solutions with Flutter, React.js and Next.js for seamless user experiences.",
-    "Mentored junior developers, conducted code reviews, and established best practices for clean and maintainable code.",
-    "Collaborated closely with product managers, designers, and stakeholders to align technical solutions with business goals.",
+    "Leading the IT department and development team to design, deliver, and operate web and mobile products for Pixel Boho clients.",
+    "Owned end-to-end delivery across frontend, backend, admin panels, and campaign landing systems using React, Next.js, Flutter, Node.js, and Django.",
+    "Managed DevOps and infrastructure across AWS, Azure, Google Cloud (Cloud Run), Hostinger, and GoDaddy — including hosting, deployments, servers, and DNS for production client modules.",
+    "Mentored developers, set engineering practices, and aligned technical solutions with client and business goals.",
+    "Drove architecture, security, and release readiness for enterprise apps, real-estate platforms, and EdTech products.",
   ],
 },
 
@@ -257,6 +283,157 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    name: "Bromide",
+    description:
+      "Led an enterprise cross-platform mobile ecosystem for Talent, Vendor, Production, and Production House users in the media industry. Built with Flutter, Django REST, PostgreSQL, MongoDB, and AWS (EC2, S3, RDS), including role-based profiles, feed, messaging, subscriptions, EKYC, and a full admin platform.",
+    tags: [
+      { name: "flutter", color: "blue-text-gradient" },
+      { name: "django", color: "green-text-gradient" },
+      { name: "aws", color: "pink-text-gradient" },
+      { name: "postgresql", color: "white-text-gradient" },
+      { name: "mongodb", color: "orange-text-gradient" },
+      { name: "enterprise", color: "blue-text-gradient" },
+    ],
+    image: bromide,
+    source_links: {},
+  },
+  {
+    name: "CareerIQ360",
+    description:
+      "Designed and delivered a psychometric testing website and user portal with JWT auth, dashboards, test generation, reports, subscriptions, and payment billing. Built admin tooling for users, plans, coupons, referrals, refunds, blogs, and SEO, with Django backend and React frontend.",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "django", color: "green-text-gradient" },
+      { name: "jwt-auth", color: "pink-text-gradient" },
+      { name: "payments", color: "white-text-gradient" },
+      { name: "admin-panel", color: "orange-text-gradient" },
+    ],
+    image: careeriq360,
+    source_links: {
+      website: "https://careeriq360.ai/",
+    },
+  },
+  {
+    name: "WhatNext",
+    description:
+      "Led website enhancements (blog, founder pages), campaign landing pages, and a Tele CRM admin panel for overseas education operations. Owned frontend/backend delivery plus hosting and server infrastructure across WhatNext modules (Next.js and Django).",
+    tags: [
+      { name: "nextjs", color: "blue-text-gradient" },
+      { name: "django", color: "green-text-gradient" },
+      { name: "crm", color: "pink-text-gradient" },
+      { name: "admin-panel", color: "white-text-gradient" },
+      { name: "hosting", color: "orange-text-gradient" },
+    ],
+    image: whatnext,
+    source_links: {
+      website: "https://whatnextoverseas.com/",
+    },
+  },
+  {
+    name: "PrepAcademy",
+    description:
+      "Led PrepAcademy web platform work including SEO/content updates, admin panel rework, and campaign landing pages (CAT, CUET, LawPrep) with Zoom/WhatsApp/email integrations and automated reminders. Also delivered lead-management admin panels, tele CRM, and production hosting.",
+    tags: [
+      { name: "nextjs", color: "blue-text-gradient" },
+      { name: "react", color: "green-text-gradient" },
+      { name: "django", color: "pink-text-gradient" },
+      { name: "landing-pages", color: "white-text-gradient" },
+      { name: "telecrm", color: "orange-text-gradient" },
+    ],
+    image: prepacademy,
+    source_links: {
+      website: "https://prepacademy.in/",
+    },
+  },
+  {
+    name: "Indigo",
+    description:
+      "Designed and developed a large corporate website with custom UI across Home, Platform, Solutions, Services, Resources, Careers, blogs, FAQ, and newsletter modules. Built a content/SEO admin panel and managed hosting for all modules (React and Node.js).",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "nodejs", color: "green-text-gradient" },
+      { name: "seo", color: "pink-text-gradient" },
+      { name: "admin-panel", color: "white-text-gradient" },
+      { name: "cms", color: "orange-text-gradient" },
+    ],
+    image: indigo,
+    source_links: {
+      website: "https://indigoinform.com/",
+    },
+  },
+  {
+    name: "Paramount Ispace",
+    description:
+      "Delivered a mobile-responsive property listing platform with filters, detailed property pages, careers, and enquiry forms. Built admin management for listings, enquiries, testimonials, and careers, with Node.js backend and Next.js frontend.",
+    tags: [
+      { name: "nextjs", color: "blue-text-gradient" },
+      { name: "typescript", color: "green-text-gradient" },
+      { name: "nodejs", color: "pink-text-gradient" },
+      { name: "real-estate", color: "white-text-gradient" },
+      { name: "admin-panel", color: "orange-text-gradient" },
+    ],
+    image: paramountIspace,
+    source_links: {
+      website: "https://paramountispace.com/",
+    },
+  },
+  {
+    name: "Thejus Homes",
+    description:
+      "Built a responsive real-estate website with property listings, filters, detailed property pages, testimonials, and enquiry flows. Delivered an admin panel for listings and leads, plus hosting and deployment (Next.js and Node.js).",
+    tags: [
+      { name: "nextjs", color: "blue-text-gradient" },
+      { name: "nodejs", color: "green-text-gradient" },
+      { name: "real-estate", color: "pink-text-gradient" },
+      { name: "admin-panel", color: "white-text-gradient" },
+      { name: "lead-gen", color: "orange-text-gradient" },
+    ],
+    image: thejusHomes,
+    source_links: {},
+  },
+  {
+    name: "Commercial Rent Management",
+    description:
+      "Ongoing role-based web app for commercial buildings, tenants, agreements, maintenance, payments, and GST/TDS rent calculations. Includes dashboards, reminders for dues and agreement expiry, document management, and secure hosting.",
+    tags: [
+      { name: "web-app", color: "blue-text-gradient" },
+      { name: "rbac", color: "green-text-gradient" },
+      { name: "payments", color: "pink-text-gradient" },
+      { name: "dashboard", color: "white-text-gradient" },
+      { name: "ongoing", color: "orange-text-gradient" },
+    ],
+    image: commercialRent,
+    source_links: {},
+  },
+  {
+    name: "Sastra",
+    description:
+      "Designed and developed a custom mobile application for an Indian Army client with calculation modules for shooting range and drone operations, logging for record management, and dedicated observation views for monitoring and analysis.",
+    tags: [
+      { name: "mobile", color: "blue-text-gradient" },
+      { name: "custom-ui", color: "green-text-gradient" },
+      { name: "calculations", color: "pink-text-gradient" },
+      { name: "logging", color: "white-text-gradient" },
+      { name: "ops-tools", color: "orange-text-gradient" },
+    ],
+    image: sastra,
+    source_links: {},
+  },
+  {
+    name: "TrendzB2B",
+    description:
+      "Built a campaign landing page with application forms, OTP verification, and WhatsApp/email communication. Implemented automated reminders and an admin panel for lead tracking, with Node.js backend and React frontend.",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "nodejs", color: "green-text-gradient" },
+      { name: "otp-auth", color: "pink-text-gradient" },
+      { name: "whatsapp", color: "white-text-gradient" },
+      { name: "admin-panel", color: "orange-text-gradient" },
+    ],
+    image: trendzb2b,
+    source_links: {},
+  },
    {
     name: "IMODA",
     description:

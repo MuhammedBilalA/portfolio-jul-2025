@@ -1,4 +1,4 @@
-import logo from "./logo.png";
+import logo from "./logo-mb.png";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -18,6 +18,8 @@ import xlConnect from './xlConnect.jpg'
 import mysql from './tech/mysql.png';
 import express from './tech/express.png';
 import aws from './tech/aws.png';
+import azure from './tech/azure.svg'
+import googlecloud from './tech/googlecloud.svg'
 import mui from './tech/mui.png'
 import git from "./tech/git.png";
 import html from "./tech/html.png";
@@ -45,6 +47,16 @@ import playstoreIcon from './playstoreIcon.png'
 import saheerTestimonial from './saheerTestimonial.jpg'
 import ajaiTestimonial from './ajaiTestimonial.png'
 import shamilTestimonial from './shamilTestimonial.png'
+import bromide from './projects/bromide.png'
+import careeriq360 from './projects/careeriq360.png'
+import whatnext from './projects/whatnext.png'
+import prepacademy from './projects/prepacademy.png'
+import indigo from './projects/indigo.png'
+import thejusHomes from './projects/thejus-homes.svg'
+import paramountIspace from './projects/paramount-ispace.png'
+import commercialRent from './projects/commercial-rent.svg'
+import sastra from './projects/sastra.svg'
+import trendzb2b from './projects/trendzb2b.svg'
 
 
 export {
@@ -63,6 +75,8 @@ export {
   mysql,
   express,
   aws,
+  azure,
+  googlecloud,
   mui,
   firstTestimonial,
   secondTestimonial,
@@ -79,20 +93,30 @@ export {
   redux,
   tailwind,
   threejs,
-flutter,
-firebase,
-xlConnect,
-vergeTab,
-vergeTabLauncher,
-imoda,
-xceptionalLearning,
-ies,
-blackBeatz,
-cloudSpotter,
-soleSphere,
+  flutter,
+  firebase,
+  xlConnect,
+  vergeTab,
+  vergeTabLauncher,
+  imoda,
+  xceptionalLearning,
+  ies,
+  blackBeatz,
+  cloudSpotter,
+  soleSphere,
   websiteIcon,
   playstoreIcon,
   ajaiTestimonial,
-  saheerTestimonial
-  ,shamilTestimonial
+  saheerTestimonial,
+  shamilTestimonial,
+  bromide,
+  careeriq360,
+  whatnext,
+  prepacademy,
+  indigo,
+  thejusHomes,
+  paramountIspace,
+  commercialRent,
+  sastra,
+  trendzb2b,
 };

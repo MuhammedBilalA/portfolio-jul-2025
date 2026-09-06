@@ -1,0 +1,20 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#151030"/>
+      <stop offset="55%" stop-color="#1d1836"/>
+      <stop offset="100%" stop-color="#050816"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#915EFF"/>
+      <stop offset="100%" stop-color="#7a4fd6"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="460" fill="url(#bg)"/>
+  <circle cx="620" cy="70" r="120" fill="#915EFF" opacity="0.12"/>
+  <circle cx="80" cy="400" r="90" fill="#915EFF" opacity="0.08"/>
+  <rect x="48" y="48" width="120" height="4" rx="2" fill="url(#accent)"/>
+  <text x="48" y="210" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700">Sastra</text>
+  <text x="48" y="255" fill="#aaa6c3" font-family="Segoe UI, Arial, sans-serif" font-size="22">Operations Mobile App</text>
+  <text x="48" y="400" fill="#915EFF" font-family="Segoe UI, Arial, sans-serif" font-size="16" letter-spacing="2">PIXEL BOHO</text>
+</svg>

@@ -1,0 +1,11 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MB">
+  <defs>
+    <linearGradient id="mbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#915EFF"/>
+      <stop offset="100%" stop-color="#7a4fd6"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#050816"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="url(#mbGrad)" stroke-width="2" opacity="0.7"/>
+  <text x="32" y="42" text-anchor="middle" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="26" font-weight="800" letter-spacing="-1" fill="url(#mbGrad)">MB</text>
+</svg>

@@ -1,0 +1,6 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="24" fill="#151030"/>
+  <path d="M28 84 L64 28 L100 84 Z" fill="none" stroke="#0078D4" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M40 84 L64 44 L88 84 Z" fill="#0078D4" opacity="0.85"/>
+  <text x="64" y="108" text-anchor="middle" fill="#aaa6c3" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600">Azure</text>
+</svg>
