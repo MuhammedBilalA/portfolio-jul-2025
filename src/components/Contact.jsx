@@ -29,39 +29,29 @@ const Contact = () => {
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
 
-    try {
-      const API_URL = import.meta.env.DEV
-        ? "http://localhost:4578"
-        : "https://portfolio-backend-muhammedbilala.vercel.app";
-      const response = await fetch(`${API_URL}/api/send-email`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(form),
-      });
+    const text = [
+      "Hello Bilal, I came across your portfolio and would like to connect.",
+      "",
+      `Name: ${form.name}`,
+      `Email: ${form.email}`,
+      `Mobile: ${form.mobile}`,
+      `Message: ${form.message}`,
+    ].join("\n");
 
-      const result = await response.json();
+    window.open(
+      `https://wa.me/918606708772?text=${encodeURIComponent(text)}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
 
-      if (response.ok) {
-        setStatusType("success");
-        setStatusMessage("Thank you for reaching out. I’ll get back to you shortly.");
-        setForm({ name: "", email: "", mobile: "", message: "" });
-      } else {
-        setStatusType("error");
-        setStatusMessage(result.error || "Something went wrong. Please try again later.");
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      setStatusType("error");
-      setStatusMessage("Something went wrong. Please try again later.");
-    } finally {
-      setLoading(false);
-    }
+    setStatusType("success");
+    setStatusMessage("Opening WhatsApp… I’ll get back to you shortly.");
+    setForm({ name: "", email: "", mobile: "", message: "" });
+    setLoading(false);
   };
 
   return (
